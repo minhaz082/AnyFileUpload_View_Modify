@@ -1,0 +1,26 @@
+USE [MeghnaSolarTestB]
+GO
+
+/****** Object:  Table [dbo].[FileUploadForTest]    Script Date: 06/05/2015 03:59:58 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[FileUploadForTest](
+	[IID] [bigint] IDENTITY(1,1) NOT NULL,	
+	[FileName] [nvarchar](500) NOT NULL,
+	[FilePath] [nvarchar](500) NOT NULL,
+	[CreateBy] [bigint] NOT NULL,
+	[CreateDate] [datetime] NOT NULL,
+	[UpdateBy] [bigint] NOT NULL,
+	[Updatedate] [datetime] NOT NULL,
+	[IsRemove] [bit] NOT NULL,	
+ CONSTRAINT [PK_FileUploadForTest] PRIMARY KEY CLUSTERED 
+(
+	[IID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
